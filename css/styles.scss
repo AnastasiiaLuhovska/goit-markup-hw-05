@@ -455,7 +455,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FCFCFC;
-    padding: 72px 24px;
+    padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
@@ -496,8 +496,6 @@ body {
           }
         }
 
-    .form-paragraph{
-      margin-bottom: 16px;
 
       .paragraph{
         font-weight: 500;
@@ -506,13 +504,14 @@ body {
         letter-spacing: 0.02em;
         text-align: center;
         color: #2E2F42;
+        margin-bottom: 16px;
       }
-    }
 
 
       .contact-form{
 
-        .field-name{
+        .field{
+          margin-bottom: 8px;
 
           .label{
             display: block;
@@ -524,147 +523,14 @@ body {
             margin-bottom: 4px;
           }
 
-          .input-name{
-            margin-bottom: 8px;
-            position: relative;
-
-
-            .input{
-              border: 1px solid rgba(46, 47, 66, 0.4);
-              background-color: transparent;
-              border-radius: 4px;
-              height: 40px;
-              width: 100%;
-              padding-left: 38px;
-              transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-              &:focus{
-                outline: transparent;
-                border-color: #4D5AE5;
-              }
-            }
-            .input:focus + .icon{
-              fill: #4D5AE5;
-            }
-
-            .icon{
-              position: absolute;
-              left: 16px;
-              top: 50%;
-              transform: translateY(-50%);
-              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
-            }
-          }
-        }
-
-        .field-phone{
-
-          .label{
-            display: block;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 117%;
-            letter-spacing: 0.04em;
-            color: #8E8F99;
-            margin-bottom: 4px;
-          }
-
-          .input-phone{
-            margin-bottom: 8px;
-            position: relative;
-
-
-            .input{
-              border: 1px solid rgba(46, 47, 66, 0.4);
-              background-color: transparent;
-              border-radius: 4px;
-              height: 40px;
-              width: 100%;
-              padding-left: 38px;
-              transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-              &:focus{
-                outline: transparent;
-                border-color: #4D5AE5;
-              }
-            }
-            .input:focus + .icon{
-              fill: #4D5AE5;
-            }
-
-            .icon{
-              position: absolute;
-              left: 16px;
-              top: 50%;
-              transform: translateY(-50%);
-              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-            }
-          }
-        }
-
-        .field-email{
-
-          .label{
-            display: block;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 117%;
-            letter-spacing: 0.04em;
-            color: #8E8F99;
-            margin-bottom: 4px;
-          }
-
-          .input-email{
-            margin-bottom: 8px;
-            position: relative;
-
-
-            .input{
-              border: 1px solid rgba(46, 47, 66, 0.4);
-              background-color: transparent;
-              border-radius: 4px;
-              height: 40px;
-              width: 100%;
-              padding-left: 38px;
-              transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-              &:focus{
-                outline: transparent;
-                border-color: #4D5AE5;
-              }
-            }
-            .input:focus + .icon{
-              fill: #4D5AE5;
-            }
-
-            .icon{
-              position: absolute;
-              left: 16px;
-              top: 50%;
-              transform: translateY(-50%);
-              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-            }
-          }
-        }
-
-        .field-comment{
-          margin-bottom: 16px;
-
-          .label{
-            display: block;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 117%;
-            letter-spacing: 0.04em;
-            color: #8E8F99;
-            margin-bottom: 4px;
-          }
           .comment{
             resize: none;
+            outline: transparent;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            color: rgba(46, 47, 66, 0.4);
+            background-color: transparent;
             border: 1px solid rgba(46, 47, 66, 0.4);
             border-radius: 4px;
             margin-bottom: 8px;
@@ -675,7 +541,6 @@ body {
             transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
             &:focus{
-              outline: transparent;
               border-color: #4D5AE5;
             }
           }
@@ -688,44 +553,71 @@ body {
             color: rgba(46, 47, 66, 0.4);
             margin-bottom: 4px;
           }
+
+          .input-container{
+            margin-bottom: 8px;
+            position: relative;
+
+
+            .input{
+              border: 1px solid rgba(46, 47, 66, 0.4);
+              background-color: transparent;
+              outline: transparent;
+              border-radius: 4px;
+              height: 40px;
+              width: 100%;
+              padding-left: 38px;
+              transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+              &:focus{
+
+                border-color: #4D5AE5;
+              }
+            }
+            .input:focus + .icon{
+              fill: #4D5AE5;
+            }
+
+            .icon{
+              position: absolute;
+              left: 16px;
+              top: 50%;
+              transform: translateY(-50%);
+              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+            }
+          }
         }
-        }
+      }
 
         .agreement{
           margin-bottom:  24px;
           display: flex;
           align-items: center;
 
-          .input-checkbox{
-            position: relative;
 
+            .visually-hidden{
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              margin: -1px;
+              border: 0;
+              padding: 0;
+              white-space: nowrap;
+              clip-path: inset(100%);
+              clip: rect(0 0 0 0);
+              overflow: hidden;
 
-            .checkbox{
-              appearance: none;
-              margin-right: 8px;
-              width: 16px;
-              height: 16px;
-              border-radius: 2px;
-              border: 1px solid #8E8F99;
-
-              &:checked{
+              &:checked + .label-checkbox .checkbox{
                 background-color: #404BBF;
-                border-color: #404BBF;
+                border: none;
+              }
+
+              &:checked + .label-checkbox .checkbox .icon{
+                fill: #F4F4FD;
               }
             }
-            .icon{
-              position: absolute;
-              top: 4px;
-              left: 3px;
-              pointer-events: none;
-              fill: transparent;
-            }
-            .checkbox:checked + .icon{
-              fill: #F4F4FD;
-            }
-          }
-
-
 
           .label-checkbox{
             font-weight: 400;
@@ -741,16 +633,28 @@ body {
               color: #4D5AE5;
             }
 
+            .checkbox{
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 16px;
+              height: 16px;
+              border: 1px solid rgba(46, 47, 66, 0.4);
+              border-radius: 2px;
+              transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+              .icon{
+                pointer-events: none;
+                fill: transparent;
+              }
+            }
           }
         }
 
-        .button-container{
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
           .button{
+            display: block;
+            margin: 0 auto;
+            font-family: "Roboto", sans-serif;
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
@@ -760,18 +664,19 @@ body {
             border: none;
             border-radius: 4px;
             padding: 16px 32px;
-            width: 169px;
+            min-width: 169px;
             height: 56px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
             background: #4D5AE5;
+            cursor: pointer;
 
             &:hover,
             &:focus {
               background-color: #404BBF;
             }
           }
-        }
-      }
+  }
 }
 
 
