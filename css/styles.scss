@@ -589,6 +589,10 @@ body {
             }
           }
         }
+        .container{
+          margin-bottom: 16px;
+
+        }
       }
 
         .agreement{
@@ -611,6 +615,7 @@ body {
 
               &:checked + .label-checkbox .checkbox{
                 background-color: #404BBF;
+                fill: #F4F4FD;
                 border: none;
               }
 
@@ -637,6 +642,7 @@ body {
               display: inline-flex;
               align-items: center;
               justify-content: center;
+              fill: transparent;
               width: 16px;
               height: 16px;
               border: 1px solid rgba(46, 47, 66, 0.4);
@@ -791,8 +797,11 @@ body {
             width: 264px;
             height: 40px;
             padding: 8px 16px;
-            background-color: #2E2F42;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+            background-color: transparent;
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: 0.04em;
 
             &::placeholder{
               font-weight: 400;
@@ -807,7 +816,7 @@ body {
         .button{
           display: flex;
           font-family: "Roboto", sans-serif;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           border-radius: 4px;
           border: none;
